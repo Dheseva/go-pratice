@@ -69,3 +69,21 @@ func miniMaxSum(arr []int32) {
     fmt.Println(min,max)
 
 }
+
+func birthdayCakeCandles(candles []int32) int32 {
+    // Jumlah lilin paling tinggi
+    lilin := candles
+    maks := lilin[0]
+    var total int32
+    for _, v := range lilin{
+        if v > maks{
+            maks = v
+        }
+    }
+    for _, v2 := range lilin{
+        if v2 == maks{
+            total = total + 1
+        }
+    }
+    return total
+}
